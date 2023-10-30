@@ -1,8 +1,8 @@
 const fs = require('fs');
 const { Sequelize } = require('sequelize');
-const isVPS = !(__dirname.startsWith("/rgnk") || __dirname.startsWith("/skl"));
-const isHeroku = __dirname.startsWith("/skl");
-const isKoyeb = __dirname.startsWith("/rgnk");
+const isVPS = !(__dirname.startsWith("/shyam") || __dirname.startsWith("/skl"));
+const isHeroku = __dirname.startsWith("/shyam");
+const isKoyeb = __dirname.startsWith("/shyam");
 const isRailway = __dirname.startsWith("/railway");
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 function convertToBool(text, fault = 'true',fault2='on') {
@@ -55,13 +55,13 @@ module.exports = {
     RBG_KEY: process.env.RBG_KEY || '',
     ALLOWED: process.env.ALLOWED || '91,94,2',
     NOT_ALLOWED: process.env.ALLOWED || '91,94,212',
-    CHATBOT: process.env.CHATBOT || 'off',
+    CHATBOT: process.env.CHATBOT || 'on',
     HANDLERS: process.env.HANDLERS || '.,',
     STICKER_DATA: process.env.STICKER_DATA || "ﮩ٨ـﮩﮩ٨ـ«ꜱʜʏᴀᴍʙᴏᴛ»ﮩ٨ـﮩﮩ٨ـ",
     BOT_NAME: process.env.BOT_NAME || 'ꜱʜʏᴀᴍʙᴏᴛ',
     AUDIO_DATA: process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "private" ? 'ꪶ¹ﮩ٨ـﮩﮩ٨ـ«ꜱʜʏᴀᴍ»ﮩ٨ـﮩﮩ٨ـ¹ꫂ;shyam bot; : process.env.AUDIO_DATA,
     TAKE_KEY: process.env.TAKE_KEY || '',
-    MODE: process.env.MODE || 'private',
+    MODE: process.env.MODE || 'public',
     WARN: process.env.WARN || '4',
     ANTILINK_WARN: process.env.ANTILINK_WARN || '',
     HEROKU: {
