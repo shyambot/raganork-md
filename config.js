@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { Sequelize } = require('sequelize');
-const isVPS = !(__dirname.startsWith("/shyam") || __dirname.startsWith("/skl"));
+const isVPS = !(__dirname.startsWith("/shyam") || __dirname.startsWith("/shyam"));
 const isHeroku = __dirname.startsWith("/shyam");
 const isKoyeb = __dirname.startsWith("/shyam");
 const isRailway = __dirname.startsWith("/railway");
@@ -54,7 +54,7 @@ module.exports = {
     BOT_INFO: process.env.BOT_INFO || 'ꜱʜʏᴀᴍʙᴏᴛ;ꜱʜʏᴀᴍ;0;',
     RBG_KEY: process.env.RBG_KEY || '',
     ALLOWED: process.env.ALLOWED || '91,94,2',
-    NOT_ALLOWED: process.env.ALLOWED || '91,94,212',
+    NOT_ALLOWED: process.env.ALLOWED || ',94,212',
     CHATBOT: process.env.CHATBOT || 'on',
     HANDLERS: process.env.HANDLERS || '.,',
     STICKER_DATA: process.env.STICKER_DATA || "ﮩ٨ـﮩﮩ٨ـ«ꜱʜʏᴀᴍʙᴏᴛ»ﮩ٨ـﮩﮩ٨ـ",
